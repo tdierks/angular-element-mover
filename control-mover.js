@@ -1,6 +1,5 @@
 (function() {
   var app = angular.module('controlMover', []);
-  console.log("here");
   app.directive('moveTo', [function() {
     return {
       restrict: 'A',
@@ -13,4 +12,3 @@
     };
   }]);
 })();
-  console.log("yo");
