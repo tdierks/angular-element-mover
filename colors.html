@@ -1,0 +1,5 @@
+<label move-to="#panecontrols" ng-init="color = 'red'">
+  <select ng-model="color" ng-options="c for c in ['red', 'blue', 'yellow']"></select>
+</label>
+<br>
+<div ng-style="{ 'height': '100px', 'width': '100px', 'background-color': color }"></div>

@@ -1,0 +1,26 @@
+<!doctype html>
+<!-- Note that the controlMover app needs to be named here -->
+<html ng-app="controlMover">
+<head>
+<!-- JQuery must be loaded before Angular -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+<script src="control-mover.js"></script>
+<script src="demo-controller.js"></script>
+<title>Element Mover</title>
+</head>
+<body ng-controller="DemoController">
+<div>
+  Choose your subpanel:
+  <select ng-model="panel" ng-options="v.title for v in panels"></select>
+  <br>
+  Panel controls go here:
+  <!-- The "panecontrols" name is known to the panels as the ID to drop their controls into -->
+  <span id="panecontrols"></span>
+</div>
+<div>
+  Panel appears here:
+  <div ng-include="panel.file"></div>
+</div>
+</body>
+</html>
